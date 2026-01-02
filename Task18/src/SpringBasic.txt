@@ -1,0 +1,180 @@
+1. Introduction to Spring Framework
+What is Spring Framework?
+Spring Framework is a lightweight, open-source Java framework used to build enterprise-level applications.
+
+It helps developers by:
+Reducing boilerplate code
+Providing loose coupling
+Making applications easy to test and maintain
+
+Spring follows two main principles:
+Inversion of Control
+Dependency Injection
+
+2. Spring Modules Overview
+Spring is modular, meaning you can use only what you need.
+
+Major Spring Modules
+1. Spring Core
+Provides core functionality of Spring
+Implements IoC and DI
+Contains:
+BeanFactory
+Dependency Injection
+Core utilities
+2. Spring Context
+Builds on Core module
+Provides ApplicationContext
+Supports:
+Event handling
+Annotation-based configuration
+
+3. Spring Beans
+Responsible for:
+Creating beans
+Managing bean lifecycle
+Dependency injection
+
+4. Spring MVC
+Used to build web applications
+Based on Model–View–Controller design pattern
+Handles:
+HTTP requests
+Controllers
+Views (JSP, Thymeleaf)
+REST APIs
+
+3. Inversion of Control (IoC)
+What is IoC?
+IoC means control of object creation is given to Spring, not the programmer.
+
+Instead of:
+Car car = new Car();
+Spring does:
+Creates object
+Manages object
+Injects dependencies
+
+
+How Spring Implements IoC :
+
+Spring uses:
+BeanFactory
+ApplicationContext
+
+Spring reads configuration and:
+Creates objects
+Injects dependencies
+Manages lifecycle
+
+4. Dependency Injection (DI)
+What is Dependency Injection?
+DI means injecting required objects into a class instead of creating them manually.
+
+Example
+A Car needs an Engine.
+Instead of:
+Engine e = new Engine();
+Spring injects it automatically.
+
+Types of Dependency Injection
+1. Constructor Injection
+Dependencies provided through constructor
+Recommended and safest
+
+public Car(Engine engine) {
+    this.engine = engine;
+}
+ Best for mandatory dependencies
+
+2. Setter Injection
+Dependency provided using setter method
+
+public void setEngine(Engine engine) {
+    this.engine = engine;
+}
+Used for optional dependencies
+
+Difference:
+ Constructor             Setter Injection
+Constructor Injection	Setter Injection
+Mandatory dependency	Optional dependency
+Immutable object	     Mutable object
+
+5. Spring Container
+What is Spring Container?
+Spring Container:
+Creates beans
+Manages lifecycle
+Injects dependencies
+Handles configuration
+
+Types of Spring Container
+1. BeanFactory
+Basic container
+Lightweight
+Used in small applications
+
+2. ApplicationContext
+Advanced container
+Eager loading
+Supports:
+Events
+AOP
+Annotations
+
+
+Responsibilities of Spring Container:
+Create objects
+Inject dependencies
+Manage bean lifecycle
+Handle configuration
+Destroy beans properly
+
+6. Spring Beans Basics
+What is a Spring Bean?
+A Spring Bean is an object managed by Spring Container.
+
+Example:
+@Component
+class Student {
+}
+
+Bean Configuration Approaches
+1. XML Configuration
+<bean id="car" class="com.Car"/>
+
+2. Java Configuration
+@Configuration
+class Config {
+   @Bean
+   public Car car() {
+      return new Car();
+   }
+}
+
+3. Annotation-Based Configuration
+@Component
+@Service
+@Repository
+@Controller
+
+@Component-Based Configuration :
+@Component → Generic component
+@Service → Business logic
+@Repository → DAO layer
+@Controller → Web controller
+
+Spring automatically scans and creates beans.
+
+7. Advantages of Spring Framework
+
+Loose couplings
+Easy dependency management
+Reduces boilerplate code
+Supports REST APIs
+Easy testing (Mockito, JUnit)
+Modular and lightweight
+Supports transaction management
+Integrates with Hibernate, JPA, JDBC
+Industry standard for Java backend
