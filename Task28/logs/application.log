@@ -1,0 +1,140 @@
+2026-01-14 12:38:07 INFO  [main] com.example.Task28.Task28Application - Starting Task28Application using Java 21.0.8 with PID 12192 (C:\Users\SHREYASH\Downloads\Task28\Task28\target\classes started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 12:38:07 INFO  [main] com.example.Task28.Task28Application - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 12:38:09 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-14 12:38:09 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:38:09 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-14 12:38:09 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-14 12:38:09 INFO  [main] org.springframework.boot.web.context.servlet.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1799 ms
+2026-01-14 12:38:09 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 12:38:09 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:38:09 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-14 12:38:09 INFO  [main] com.example.Task28.Task28Application - Started Task28Application in 3.594 seconds (process running for 4.315)
+2026-01-14 12:39:18 INFO  [http-nio-8080-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14 12:39:18 INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-14 12:39:18 INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2026-01-14 12:39:18 INFO  [http-nio-8080-exec-3] com.example.Task28.UserService - User fetched successfully
+2026-01-14 12:41:08 ERROR [http-nio-8080-exec-5] com.example.Task28.UserService - Invalid user id received: -1
+2026-01-14 12:41:08 ERROR [http-nio-8080-exec-5] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Invalid ID] with root cause
+java.lang.IllegalArgumentException: Invalid ID
+	at com.example.Task28.UserService.getUserById(UserService.java:22)
+	at com.example.Task28.UserController.getUser(UserController.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-14 12:47:25 INFO  [SpringApplicationShutdownHook] org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-14 12:47:25 INFO  [tomcat-shutdown] org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-14 12:47:30 INFO  [main] com.example.Task28.Task28Application - Starting Task28Application using Java 21.0.8 with PID 39916 (C:\Users\SHREYASH\Downloads\Task28\Task28\target\classes started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 12:47:30 INFO  [main] com.example.Task28.Task28Application - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 12:47:31 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-14 12:47:31 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:47:31 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-14 12:47:31 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-14 12:47:31 INFO  [main] org.springframework.boot.web.context.servlet.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1568 ms
+2026-01-14 12:47:32 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 12:47:32 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:47:32 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-14 12:47:32 INFO  [main] com.example.Task28.Task28Application - Started Task28Application in 3.319 seconds (process running for 3.967)
+2026-01-14 12:47:57 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14 12:47:57 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-14 12:47:57 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-01-14 12:51:19 INFO  [SpringApplicationShutdownHook] org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-14 12:51:19 INFO  [tomcat-shutdown] org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-14 12:51:36 INFO  [main] com.example.Task28.Task28Application - Starting Task28Application using Java 21.0.8 with PID 36904 (C:\Users\SHREYASH\Downloads\Task28\Task28\target\classes started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 12:51:36 INFO  [main] com.example.Task28.Task28Application - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 12:51:37 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-14 12:51:37 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:51:37 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-14 12:51:37 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-14 12:51:37 INFO  [main] org.springframework.boot.web.context.servlet.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1300 ms
+2026-01-14 12:51:38 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 12:51:38 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:51:38 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-14 12:51:38 INFO  [main] com.example.Task28.Task28Application - Started Task28Application in 2.773 seconds (process running for 3.381)
+2026-01-14 12:51:44 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14 12:51:44 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-14 12:51:44 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-01-14 12:52:30 INFO  [SpringApplicationShutdownHook] org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-14 12:52:30 INFO  [tomcat-shutdown] org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-14 12:53:09 INFO  [main] com.example.Task28.Task28Application - Starting Task28Application using Java 21.0.8 with PID 4504 (C:\Users\SHREYASH\Downloads\Task28\Task28\target\classes started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 12:53:09 INFO  [main] com.example.Task28.Task28Application - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 12:53:11 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-14 12:53:11 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:53:11 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-14 12:53:11 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-14 12:53:11 INFO  [main] org.springframework.boot.web.context.servlet.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1289 ms
+2026-01-14 12:53:12 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 12:53:12 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-14 12:53:12 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-14 12:53:12 INFO  [main] com.example.Task28.Task28Application - Started Task28Application in 2.71 seconds (process running for 3.163)
+2026-01-14 12:53:20 INFO  [http-nio-8080-exec-4] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14 12:53:20 INFO  [http-nio-8080-exec-4] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-14 12:53:20 INFO  [http-nio-8080-exec-4] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-01-14 12:57:38 INFO  [SpringApplicationShutdownHook] org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-14 12:57:38 INFO  [tomcat-shutdown] org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-14 12:57:55 INFO  [main] com.example.Task28.Task28ApplicationTests - Starting Task28ApplicationTests using Java 21.0.8 with PID 31676 (started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 12:57:55 INFO  [main] com.example.Task28.Task28ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 12:57:57 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 12:57:57 INFO  [main] com.example.Task28.Task28ApplicationTests - Started Task28ApplicationTests in 2.248 seconds (process running for 3.776)
+2026-01-14 12:59:11 INFO  [main] com.example.Task28.Task28ApplicationTests - Starting Task28ApplicationTests using Java 21.0.8 with PID 40052 (started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 12:59:11 INFO  [main] com.example.Task28.Task28ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 12:59:13 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 12:59:13 INFO  [main] com.example.Task28.Task28ApplicationTests - Started Task28ApplicationTests in 1.996 seconds (process running for 3.473)
+2026-01-14 13:00:26 INFO  [main] com.example.Task28.Task28Application - Starting Task28Application using Java 21.0.8 with PID 43440 (C:\Users\SHREYASH\Downloads\Task28\Task28\target\classes started by SHREYASH in C:\Users\SHREYASH\Downloads\Task28\Task28)
+2026-01-14 13:00:26 INFO  [main] com.example.Task28.Task28Application - No active profile set, falling back to 1 default profile: "default"
+2026-01-14 13:00:28 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-14 13:00:28 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-14 13:00:28 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-14 13:00:28 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-14 13:00:28 INFO  [main] org.springframework.boot.web.context.servlet.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1608 ms
+2026-01-14 13:00:28 INFO  [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-01-14 13:00:28 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-14 13:00:28 INFO  [main] org.springframework.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-14 13:00:28 INFO  [main] com.example.Task28.Task28Application - Started Task28Application in 3.156 seconds (process running for 3.642)
+2026-01-14 13:00:39 INFO  [http-nio-8080-exec-6] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14 13:00:39 INFO  [http-nio-8080-exec-6] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-14 13:00:39 INFO  [http-nio-8080-exec-6] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-01-14 13:06:48 INFO  [SpringApplicationShutdownHook] org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-14 13:06:48 INFO  [tomcat-shutdown] org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
