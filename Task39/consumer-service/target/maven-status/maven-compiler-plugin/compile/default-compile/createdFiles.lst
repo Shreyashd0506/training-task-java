@@ -1,0 +1,3 @@
+com\example\consumer_service\ConsumerServiceApplication.class
+com\example\consumer_service\config\RabbitMQConfig.class
+com\example\consumer_service\listener\OrderListener.class
